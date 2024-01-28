@@ -1,4 +1,6 @@
 const express = require("express");
+const dbconn = require("./config/dbconn")
+// const { PrismaClient } = require("@prisma/client");
 require("dotenv").config();
 const app = express();
 const cors = require("cors");
@@ -18,5 +20,7 @@ app.use(
         extended: true,
     })
 );
+dbconn();
 app.use("/", (req, res) => res.send("SERVER ONNNNN"));
 app.listen(PORT, () => console.log("----- SERVER READY ON " + PORT + " -----"));
+
