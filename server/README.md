@@ -1,4 +1,4 @@
-# How about coding server ?
+# Server
 
 ## Initialize the project
 
