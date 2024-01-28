@@ -6,6 +6,15 @@
 npm init -y
 ```
 
+To hidden node_modules, you can set up in file json settings:
+
+```json
+"files.exclude": {
+    "**/.git": false,
+    "**/node_modules": true
+}
+```
+
 ## Run app
 
 - use ```nodemon index.js``` to track all changes of code in development enviroment
