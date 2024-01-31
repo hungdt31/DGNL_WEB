@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <div className="w-full px-7 flex">
       <div className="md:w-full">
-        <img src={banner} className="md:h-[500px] h-[250px] w-full" />
+        <img src={banner} className="md:h-[500px] h-[250px] w-full rounded-3xl" />
       </div>
       {nav && (
         <div className="flex-col gap-5 p-3 right-0 flex w-1/3">
