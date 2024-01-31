@@ -5,7 +5,7 @@ import Button from "../common/Button";
 import { useContext } from "react";
 import NavBtn from "~/utils/NavBtn";
 const Banner = () => {
-  const {btns, getBtn} = NavBtn;
+  const { btns, getBtn } = NavBtn;
   const { nav, setNav } = useContext(NavContext);
   return (
     <div className="w-full px-7 flex">
@@ -13,7 +13,7 @@ const Banner = () => {
         <img src={banner} className="md:h-[500px] h-[250px] w-full" />
       </div>
       {nav && (
-        <div className="bg-white flex-col gap-5 p-3 right-0 flex w-1/3">
+        <div className="flex-col gap-5 p-3 right-0 flex w-1/3">
           {getBtn()}
           <Button text={"Đăng nhập"}></Button>
         </div>
