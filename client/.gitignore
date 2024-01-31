@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# latex document
+UI.log
+UI.aux
+UI.fls
+UI.synctex(busy)
+UI.fdb_latexmk
