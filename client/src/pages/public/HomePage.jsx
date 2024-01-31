@@ -1,6 +1,5 @@
 import React from 'react'
-import Banner from '~/components/banner/Banner'
-import Slider from '~/components/slider/Slider'
+import { Banner, Slider } from '~/components'
 const HomePage = () => {
   return (
     <div className='flex flex-col gap-2'>
