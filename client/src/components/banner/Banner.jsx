@@ -9,7 +9,9 @@ const Banner = () => {
   const { nav, setNav } = useContext(NavContext);
   return (
     <div className="w-full px-7 flex">
-      <img src={banner} className="md:h-[500px] w-full h-[250px]" />
+      <div className="md:w-full">
+        <img src={banner} className="md:h-[500px] h-[250px] w-full" />
+      </div>
       {nav && (
         <div className="bg-white flex-col gap-5 p-3 right-0 flex w-1/3">
           {getBtn()}
