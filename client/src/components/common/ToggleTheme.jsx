@@ -19,8 +19,8 @@ const ToggleTheme = () => {
         cls ? "bg-black" : "bg-white"
       }`}
     >
-      <img src={moon} width={20} />
       <img src={sun} width={20} />
+      <img src={moon} width={20} />
       <button
         className={`rounded-full w-[100%] bg-gray-400 absolute ${
           whiteTheme
