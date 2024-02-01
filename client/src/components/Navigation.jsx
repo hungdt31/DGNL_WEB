@@ -6,12 +6,14 @@ import NavContext from "~/hooks/NavContext";
 import ToggleTheme from "./common/ToggleTheme";
 import ThemeContext from "~/hooks/theme/themeContext";
 import Theme from "~/hooks/theme/Theme";
+import path from "~/utils/path";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const {whiteTheme} = useContext(ThemeContext);
-  const {nav, setNav} = useContext(NavContext);
+  const { whiteTheme } = useContext(ThemeContext);
+  const { nav, setNav } = useContext(NavContext);
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
-  const {btns, getBtn} = NavBtn;
+  const { getBtn } = NavBtn;
   function getCurrentDimension() {
     return {
       width: window.innerWidth,
@@ -30,15 +32,23 @@ const Navigation = () => {
     return () => {
       window.removeEventListener("resize", updateDimension);
     };
-  }, [screenSize.width >= '768']);
+  }, [screenSize.width >= "768"]);
 
   return (
-    <div className={`w-full h-[100px] flex justify-between items-center fixed z-50 ${whiteTheme ? 'bg-white' : 'bg-black'} `}>
-      <h1 className="font-bold text-3xl px-3">DGNL TEST</h1>
+    <div
+      className={`w-full h-[100px] flex justify-between items-center fixed z-50 ${
+        whiteTheme ? "bg-white" : "bg-black"
+      } `}
+    >
+      <Link to={path.HOME}>
+        <h1 className="font-bold text-3xl px-3">DGNL TEST</h1>
+      </Link>
       <div className="md:flex items-center w-1/2 hidden lg:w-1/3 justify-between p-7">
         {getBtn()}
-        <Button text={"Đăng nhập"}></Button>
-        <ToggleTheme/>
+        <Link to={path.LOGIN}>
+          <Button text={"Đăng nhập"}></Button>
+        </Link>
+        <ToggleTheme />
       </div>
       <div onClick={() => setNav(!nav)} className="md:hidden mx-5">
         <TfiAlignRight size={30} />

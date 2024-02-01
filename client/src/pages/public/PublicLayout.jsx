@@ -1,20 +1,20 @@
-import React from 'react'
-import Navigation from '../../components/Navigation'
-import Footer from '../../components/Footer'
-import { Outlet } from 'react-router-dom'
-import NavResponsive from '~/hooks/Nav'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Footer, Navigation, SubNavigation } from "~/components";
+import NavContext from "~/hooks/NavContext";
+import { useContext } from "react";
 const PublicLayout = () => {
+  const { nav } = useContext(NavContext);
   return (
-    <NavResponsive>
-      <main className='flex flex-col justify-between h-full'>
-        <Navigation/>
-        <div className='mt-[100px]'>
-          <Outlet/>
-        </div>
-        <Footer/>
-      </main>
-    </NavResponsive>
-  )
-}
+    <main className="flex flex-col justify-between h-full">
+      <Navigation />
+      <div className="mt-[100px]">
+        {nav && <SubNavigation />}
+        <Outlet />
+      </div>
+      <Footer />
+    </main>
+  );
+};
 
-export default PublicLayout
+export default PublicLayout;
