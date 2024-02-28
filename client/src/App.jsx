@@ -9,7 +9,7 @@ export default function App() {
   return (
     <main
       className={`${
-        whiteTheme ? "bg-white text-cyan-text" : "bg-black text-white"
+        whiteTheme ? "bg-white text-cyan-text" : "bg-[#181f29] text-white"
       }`}
     >
       <BrowserRouter>

@@ -37,7 +37,7 @@ const Navigation = () => {
   return (
     <div
       className={`w-full h-[100px] flex justify-between items-center fixed z-50 ${
-        whiteTheme ? "bg-white" : "bg-black"
+        whiteTheme ? "bg-white" : "bg-gradient-to-r from-[#181f29] from-70% via-[#072835] via-95% to-[#072835] to-90%"
       } `}
     >
       <Link to={path.HOME}>
